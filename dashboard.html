@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogHub - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2>BlogHub</h2>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="create-blog.html">Create Blog</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<section class="dashboard">
+
+    <h1>My Dashboard</h1>
+
+    <p id="welcomeUser"></p>
+
+    <a href="create-blog.html" class="btn">+ Create New Blog</a>
+
+    <h2>My Blogs</h2>
+
+    <div id="myBlogs" class="blog-container">
+        <!-- User blogs appear here -->
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
