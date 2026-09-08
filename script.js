@@ -9,7 +9,7 @@ function checkLogin() {
 
     return true;
 }
-const API_URL = "https://blog-application-1-jacw.onrender.com/";
+const API_URL = "https://blog-application-1-jacw.onrender.com";
 
 /* =========================
    REGISTER
