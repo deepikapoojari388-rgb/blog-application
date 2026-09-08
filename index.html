@@ -1,42 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogHub - Home</title>
+
+    <title>Blog Application</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <h2>BlogHub</h2>
+
+        <div class="logo">
+            📝 Blog Application
+        </div>
 
         <div class="nav-links">
             <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="create-blog.html">Create Blog</a>
             <a href="login.html">Login</a>
             <a href="register.html">Register</a>
-            <a href="dashboard.html">Dashboard</a>
         </div>
+
     </nav>
-</header>
 
-<section class="hero">
-    <h1>Welcome to BlogHub</h1>
-    <p>Read. Write. Share.</p>
-    <a href="create-blog.html" class="btn">Create Your Blog</a>
-</section>
 
-<section class="blogs-section">
-    <h2>Latest Blogs</h2>
+    <!-- Main Content -->
+    <main class="container">
 
-    <div id="blogList" class="blog-container">
-        <!-- Blogs will appear here -->
-    </div>
-</section>
+        <!-- Welcome Section -->
+        <section class="hero">
 
-<script src="js/script.js"></script>
+            <h1>Welcome to Blog Application</h1>
+
+            <p>
+                Read, create and manage your blogs easily.
+            </p>
+
+            <a href="create-blog.html" class="btn">
+                ✍️ Create New Blog
+            </a>
+
+        </section>
+
+
+        <!-- Blogs Section -->
+        <section class="blogs-section">
+
+            <h2>Latest Blogs</h2>
+
+
+            <!-- Search and Category Filter -->
+            <div class="blog-filters">
+
+                <!-- Search -->
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search blogs..."
+                >
+
+
+                <!-- Category Filter -->
+                <select id="categoryFilter">
+
+                    <option value="All">
+                        All Categories
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Blogs will appear here -->
+            <div id="blogs-container">
+
+                <div class="blog-card">
+                    <h3>Loading blogs...</h3>
+                    <p>Please wait...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Blog Application | Developed using HTML, CSS, JavaScript, Node.js & MongoDB
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>

@@ -3,59 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogHub - Create Blog</title>
+
+    <title>Create Blog - Blog Application</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <h2>BlogHub</h2>
+
+        <div class="logo">
+            📝 Blog Application
+        </div>
 
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="dashboard.html">Dashboard</a>
+            <a href="create-blog.html">Create Blog</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
         </div>
+
     </nav>
-</header>
 
-<div class="form-container blog-form">
 
-    <h1>Create New Blog</h1>
+    <!-- Create Blog Form -->
+    <main class="container">
 
-    <form id="blogForm">
+        <div class="form-container">
 
-        <label>Blog Title</label>
-        <input type="text" id="blogTitle" placeholder="Enter blog title" required>
+            <h1>✍️ Create New Blog</h1>
 
-        <label>Category</label>
+            <p>Share your thoughts with the world!</p>
 
-        <select id="blogCategory" required>
-            <option value="">Select Category</option>
-            <option value="Technology">Technology</option>
-            <option value="Education">Education</option>
-            <option value="Travel">Travel</option>
-            <option value="Food">Food</option>
-            <option value="Lifestyle">Lifestyle</option>
-        </select>
+            <form id="blogForm">
 
-        <label>Blog Content</label>
+                <!-- Blog Title -->
+                <label for="blogTitle">
+                    Blog Title
+                </label>
 
-        <textarea
-            id="blogContent"
-            rows="10"
-            placeholder="Write your blog here..."
-            required>
-        </textarea>
+                <input
+                    type="text"
+                    id="blogTitle"
+                    placeholder="Enter blog title"
+                    required
+                >
 
-        <button type="submit" class="btn">Publish Blog</button>
 
-    </form>
+                <!-- Category -->
+                <label for="blogCategory">
+                    Category
+                </label>
 
-</div>
+                <select id="blogCategory">
 
-<script src="js/script.js"></script>
+                    <option value="Technology">
+                        Technology
+                    </option>
+
+                    <option value="Education">
+                        Education
+                    </option>
+
+                    <option value="Travel">
+                        Travel
+                    </option>
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Lifestyle">
+                        Lifestyle
+                    </option>
+
+                    <option value="AI">
+                        Artificial Intelligence
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+
+                <!-- Blog Content -->
+                <label for="blogContent">
+                    Blog Content
+                </label>
+
+                <textarea
+                    id="blogContent"
+                    rows="10"
+                    placeholder="Write your blog content here..."
+                    required
+                ></textarea>
+
+
+                <!-- Buttons -->
+                <button type="submit" class="btn">
+                    🚀 Publish Blog
+                </button>
+
+                <a href="dashboard.html" class="btn">
+                    Cancel
+                </a>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Blog Application
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>

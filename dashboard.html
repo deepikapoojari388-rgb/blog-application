@@ -1,43 +1,85 @@
+<script>
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        alert("Please login first.");
+        window.location.href = "login.html";
+    }
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BlogHub - Dashboard</title>
+
+    <title>Dashboard - Blog Application</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- Navigation -->
     <nav class="navbar">
-        <h2>BlogHub</h2>
+
+        <div class="logo">
+            📝 Blog Application
+        </div>
 
         <div class="nav-links">
             <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
             <a href="create-blog.html">Create Blog</a>
-            <a href="#" onclick="logout()">Logout</a>
+            <button onclick="logout()">Logout</button>
         </div>
+
     </nav>
-</header>
 
-<section class="dashboard">
 
-    <h1>My Dashboard</h1>
+    <!-- Dashboard -->
+    <main class="container">
 
-    <p id="welcomeUser"></p>
+        <h1 id="welcomeUser">
+            Welcome!
+        </h1>
 
-    <a href="create-blog.html" class="btn">+ Create New Blog</a>
+        <div class="dashboard-header">
 
-    <h2>My Blogs</h2>
+            <h2>My Blogs</h2>
 
-    <div id="myBlogs" class="blog-container">
-        <!-- User blogs appear here -->
-    </div>
+            <a href="create-blog.html" class="btn">
+                ✍️ Create New Blog
+            </a>
 
-</section>
+        </div>
 
-<script src="js/script.js"></script>
+
+        <!-- User's blogs appear here -->
+        <div id="myBlogs">
+
+            <div class="blog-card">
+                <h3>Loading your blogs...</h3>
+                <p>Please wait...</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Blog Application
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
